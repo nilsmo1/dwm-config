@@ -1,2 +1,2 @@
-# dwm-config
-Some things that could be practical to keep from installations of dwm.
+# Various dwm related files 
+Things that could be practical to keep from installations of dwm.
