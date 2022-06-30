@@ -2,7 +2,7 @@
 Things that could be practical to keep between installations of dwm.
 ***
 # __sh/__
-Shell scripts
+Shell scripts for things such as volume and brightness control.
 
 # __dwm/__
 `dwm` config file and patches.
