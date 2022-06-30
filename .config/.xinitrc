@@ -48,7 +48,7 @@ picom --config ~/.config/picom/picom.conf -f &
 
 # Show time in status
 while true; do
-    xsetroot -name " $(acpi | awk '{print substr($4, 1, length($4)-1)}') | $(date | awk '{print $2,$3,substr($4, 1, length($4)-3)}') "
+    bar-xsetroot.sh || echo 'hello'
     sleep 10s
 done &
 # Loop
