@@ -75,10 +75,13 @@ static const char *termcmd[]  = { "termite", NULL };
 // Lockscreen
 static const char *b_lockscreencmd[] = { "betterlockscreen", "-l", "dimblur", "-t" };
 // Volume control
-static const char *volume_up[] = { "volume.sh", "inc" };
-static const char *volume_down[] = { "volume.sh", "dec" };
+static const char *volume_up[]          = { "volume.sh", "inc" };
+static const char *volume_down[]        = { "volume.sh", "dec" };
 static const char *volume_toggle_mute[] = { "volume.sh", "mute" };
-
+// Brightness control
+static const char *brightness_up[]   = { "brightness.sh", "inc" };
+static const char *brightness_down[] = { "brightness.sh", "dec" };
+static const char *brightness_max[]  = { "brightness.sh", "max" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -113,6 +116,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		    XK_plus,   spawn,	       {.v = volume_up } },
 	{ MODKEY|ControlMask,		    XK_minus,  spawn,	       {.v = volume_down } },
 	{ MODKEY|ControlMask,		    XK_m,      spawn,	       {.v = volume_toggle_mute } },
+	{ MODKEY|ControlMask|ShiftMask, XK_plus,   spawn,	       {.v = brightness_up } },
+	{ MODKEY|ControlMask|ShiftMask, XK_minus,  spawn,	       {.v = brightness_down } },
+	{ MODKEY|ControlMask|ShiftMask, XK_m,      spawn,	       {.v = brightness_max } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
