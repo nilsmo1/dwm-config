@@ -11,7 +11,7 @@ Shell scripts
 `dmenu` config file and patches.
 
 # __.config/__
-Various config files such as `vimrc` or `.bashrc`.'
+Various config files such as `.vimrc` or `.bashrc`.
 
 # __packages.txt__
 Required/useful packages to install when re-installing dwm.
