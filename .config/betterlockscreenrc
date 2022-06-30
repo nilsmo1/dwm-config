@@ -1,0 +1,62 @@
+# configuration file for betterlockscreen
+# Ring inside and outside color
+insidecolor=0055bb00
+ringcolor=00aaff33
+
+# Ring outside color when typing and removing characters 
+keyhlcolor=00aaffcc
+bshlcolor=00aaff48
+
+# Separator between ring segments
+separatorcolor=ffffff00
+
+# Ring inside verifying and wrong colors
+insidevercolor=00000000
+insidewrongcolor=f74d4d77
+
+# Ring outside verifying and wrong colors
+ringvercolor=bbbbbb65
+ringwrongcolor=f74d4dff
+
+# Verifying ring color (not working)
+verifcolor=00ffffff
+
+# Clock color and (not working date color)
+timecolor=ffffffbb
+datecolor=ffffff00
+
+# ?
+loginbox=00000000
+
+# Radius and width
+radius=11
+width=4
+
+# Ring, time, (date not working) positions
+ringpos='x+200:h-528'
+# Time height=23, Time width=124 (draws time (x:center), (y:bottom))
+#timepos='x+960:h-540+23' 
+timepos='x+100:h-540+23'
+datepos='x+100:h-45'
+
+# Time font
+tfont='InputMono'
+
+# betterlockscreen -u [picture-dir] to update
+blur_level=0
+blur=0
+dim_level=-1
+dim=-1
+
+
+# Path to binary: /usr/bin/betterlockscreen
+# --insidecolor=$insidecolor 
+# --ringcolor=$ringcolor --line-uses-inside \
+# --keyhlcolor=$keyhlcolor --bshlcolor=$bshlcolor 
+# --separatorcolor=$separatorcolor \
+# --insidevercolor=$insidevercolor --insidewrongcolor=$insidewrongcolor \
+# --ringvercolor=$ringvercolor --ringwrongcolor=$ringwrongcolor --indpos='x+280:h-70' \
+# --radius=20 --ring-width=4 --veriftext='' --wrongtext='' \
+# --verifcolor="$verifcolor" --timecolor="$timecolor" --datecolor="$datecolor" \
+# --noinputtext='' --force-clock $lockargs
+
