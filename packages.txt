@@ -1,0 +1,9 @@
+betterlockscreen
+feh
+git
+google-chrome
+amixer
+awk
+picom
+nitrogen
+python
