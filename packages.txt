@@ -8,3 +8,4 @@ picom
 nitrogen
 python
 xclip
+inputmono (font)
