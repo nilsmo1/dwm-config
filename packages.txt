@@ -9,3 +9,4 @@ nitrogen
 python
 xclip
 inputmono (font)
+awesome-terminal-fonts
