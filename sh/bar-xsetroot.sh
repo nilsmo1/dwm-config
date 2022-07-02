@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 bat=$(cat /sys/class/power_supply/BAT0/capacity)
-bat_icon=$(echo -e "\uf244 \uf243 \uf242 \uf241 \uf240" | awk -v i=$(expr 1 + $bat / 20) '{print $i}')
+bat_icon=$(echo -e "\uf244 \uf243 \uf242 \uf241 \uf240 \uf240" | awk -v i=$(expr 1 + $bat / 20) '{print $i}')
 charging=$(cat /sys/class/power_supply/BAT0/status)
 c_bat=$(echo -e "\uf0e7") 
 date_time=$(date -u +'%A ┃ %-d/%-m (%B %-d) ┃ %R ')
