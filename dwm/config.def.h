@@ -4,7 +4,7 @@
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 40;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Font Awesome:size=20" };
@@ -75,13 +75,15 @@ static const char *termcmd[]  = { "termite", NULL };
 // Lockscreen
 static const char *b_lockscreencmd[] = { "betterlockscreen", "-l", "dimblur", "-t" };
 // Volume control
-static const char *volume_up[]          = { "volume.sh", "inc" };
-static const char *volume_down[]        = { "volume.sh", "dec" };
+static const char *volume_up[]          = { "volume.sh", "inc"  };
+static const char *volume_down[]        = { "volume.sh", "dec"  };
 static const char *volume_toggle_mute[] = { "volume.sh", "mute" };
 // Brightness control
 static const char *brightness_up[]   = { "brightness.sh", "inc" };
 static const char *brightness_down[] = { "brightness.sh", "dec" };
 static const char *brightness_max[]  = { "brightness.sh", "max" };
+// Update status bar
+static const char *update_status[]  = { "bar-xsetroot.sh" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -114,8 +116,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,		        XK_plus,   setgaps,	       {.i = +gappx } },
 	{ MODKEY|ControlMask,		    XK_plus,   spawn,	       {.v = volume_up } },
+	{ MODKEY|ControlMask,		    XK_plus,   spawn,	       {.v = update_status } },
 	{ MODKEY|ControlMask,		    XK_minus,  spawn,	       {.v = volume_down } },
+	{ MODKEY|ControlMask,		    XK_minus,  spawn,	       {.v = update_status } },
 	{ MODKEY|ControlMask,		    XK_m,      spawn,	       {.v = volume_toggle_mute } },
+	{ MODKEY|ControlMask,		    XK_m,      spawn,	       {.v = update_status } },
 	{ MODKEY|ControlMask|ShiftMask, XK_plus,   spawn,	       {.v = brightness_up } },
 	{ MODKEY|ControlMask|ShiftMask, XK_minus,  spawn,	       {.v = brightness_down } },
 	{ MODKEY|ControlMask|ShiftMask, XK_m,      spawn,	       {.v = brightness_max } },
