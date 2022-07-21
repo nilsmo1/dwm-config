@@ -121,9 +121,9 @@ static Key keys[] = {
 	{ MODKEY,		                XK_F8,     spawn,	       {.v = update_status } },
 	{ MODKEY,		                XK_F10,    spawn,	       {.v = volume_toggle_mute } },
 	{ MODKEY,		                XK_F10,    spawn,	       {.v = update_status } },
-	{ MODKEY|ControlMask|ShiftMask, XK_plus,   spawn,	       {.v = brightness_up } },
-	{ MODKEY|ControlMask|ShiftMask, XK_minus,  spawn,	       {.v = brightness_down } },
-	{ MODKEY|ControlMask|ShiftMask, XK_m,      spawn,	       {.v = brightness_max } },
+	{ MODKEY,                       XK_F6,     spawn,	       {.v = brightness_up } },
+	{ MODKEY,                       XK_F5,     spawn,	       {.v = brightness_down } },
+	{ MODKEY,                       XK_F7,     spawn,	       {.v = brightness_max } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
