@@ -46,9 +46,12 @@ nitrogen --restore &
 # Picom
 picom --config ~/.config/picom/picom.conf -f &
 
+# Tapping
+xinput set-prop 11 328 1
+
 # Show time in status
 while true; do
-    bar-xsetroot.sh || echo 'hello'
+    bar-xsetroot.sh
     sleep 10s
 done &
 # Loop
