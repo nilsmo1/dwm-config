@@ -14,5 +14,6 @@ connection=$(netctl list | awk '/^\*/{for (i=2; i<=NF; i++) printf $i " ";}')
 
 [[ $charging = "Charging" ]] && bat_full="$c_bat_icon ($bat%)" || bat_full="$bat_icon ($bat%)"
 [[ $connection ]] && connection="$(echo -e "\uf1eb") $connection┃"
+[[ $vol_s = "on" ]] && vol_out="${vol_icons[$vol_s]} ($vol%)" || vol_out="${vol_icons[$vol_s]}"
 
-xsetroot -name "$connection ${vol_icons[$vol_s]} ($vol%) ┃ $bat_full ┃ $date_time" 
+xsetroot -name "$connection $vol_out ┃ $bat_full ┃ $date_time" 
