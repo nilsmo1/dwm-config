@@ -16,6 +16,9 @@ alias bb='sudo "$BASH" -c "$(history -p !!)"'
 alias ghci='stack ghci'
 alias py='python'
 alias l1='ls -1'
+alias pdf='zathura'
+alias grip='~/.local/bin/grip'
+alias md='typora > /dev/null 2>&1 &'
 
 PS1='[\u@\h \W]\$ '
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
