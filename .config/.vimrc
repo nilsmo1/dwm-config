@@ -1,10 +1,8 @@
 set number
 set hlsearch
 
-colo gruvbox
-set bg=dark
 syntax on
-
+:colo desert
 set encoding=UTF-8
 
 set mouse=a
@@ -15,3 +13,5 @@ set tabstop=4
 
 set undofile
 set undodir=~/.vim/undodir
+
+autocmd BufWritePost *.tex silent! !tex-live-preview.sh <afile>
