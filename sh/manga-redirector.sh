@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# manga-redirector.sh "$@" || notify-send "$(echo "$(manga-redirector.sh -h)")"
+#notify-send "$(manga-redirector.sh "$@")"      (for ulauncher)
 cd ~/Documents/code/python/manga-redirector/
 for i in "$@"; do 
     if [[ $i == "--help" || $i == "-h" ]];
