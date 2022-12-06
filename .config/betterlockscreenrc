@@ -12,17 +12,17 @@ separatorcolor=ffffff00
 
 # Ring inside verifying and wrong colors
 insidevercolor=00000000
-insidewrongcolor=f74d4d77
+insidewrongcolor=000000
 
 # Ring outside verifying and wrong colors
-ringvercolor=bbbbbb65
+ringvercolor=bbbbbb00
 ringwrongcolor=f74d4dff
 
 # Verifying ring color (not working)
-verifcolor=00ffffff
+verifcolor=00ffff00
 
 # Clock color and (not working date color)
-timecolor=ffffffbb
+timecolor=ffffffff
 datecolor=ffffff00
 
 # ?
@@ -41,7 +41,8 @@ datepos='x+100:h-45'
 
 # Time font
 tfont='InputMono'
-
+# noinputtext
+#noinputtext='*'
 # betterlockscreen -u [picture-dir] to update
 blur_level=0
 blur=0
