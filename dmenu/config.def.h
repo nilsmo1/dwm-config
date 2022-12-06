@@ -1,10 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
-static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
+static int topbar = 0;                      /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"monospace:size=12"
+	"InputMono:size=12"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char col_black[]       = "#000000";
@@ -22,9 +22,9 @@ static const char col_arch_blue[]   = "#1aa3d8";
 
 static const char *colors[SchemeLast][2] = {
 	            /*     fg         bg       */
-	[SchemeNorm] = { col_white , col_arch_blue },
-	[SchemeSel] =  { col_d_blue, col_arch_blue },
-	[SchemeOut] =  { col_black , col_arch_blue },
+	[SchemeNorm] = { col_arch_blue , col_d_blue },
+	[SchemeSel] =  { col_white, col_d_blue },
+	[SchemeOut] =  { col_black , col_d_blue },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;

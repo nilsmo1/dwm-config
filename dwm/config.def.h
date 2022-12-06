@@ -22,9 +22,9 @@ static const char col_l_orange[]    = "#ff8226";
 static const char col_d_orange[]    = "#df5f00";
 static const char col_arch_blue[]   = "#1aa3d8";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white , col_arch_blue, col_black },
-	[SchemeSel]  = { col_d_blue, col_arch_blue, col_black },
+	/*               fg              bg         border   */
+	[SchemeNorm] = { col_arch_blue, col_d_blue, col_black },
+	[SchemeSel]  = { col_white,  col_d_blue, col_black },
 };
 
 /* tagging */
