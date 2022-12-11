@@ -37,11 +37,17 @@ call plug#end()
 nnoremap <C-f>  :NERDTreeFocus<CR>
 nnoremap <C-t>  :NERDTreeToggle<CR>
 
+" switch split focus
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
 " resize split
-nnoremap <C-Left>  :vertical resize   -2<CR>
-nnoremap <C-Right> :vertical resize   +2<CR>
-nnoremap <C-Up>    :horizontal resize -2<CR>
-nnoremap <C-Down>  :horizontal resize +2<CR>
+nnoremap <C-Right> :vertical resize   -2<CR>
+nnoremap <C-Left>  :vertical resize   +2<CR>
+nnoremap <C-Down>  :horizontal resize -2<CR>
+nnoremap <C-Up>    :horizontal resize +2<CR>
 
 " unhighlight search
 nnoremap <Space>s :nohlsearch<CR>
