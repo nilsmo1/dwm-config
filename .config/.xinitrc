@@ -47,10 +47,7 @@ nitrogen --restore &
 picom --config ~/.config/picom/picom.conf -f &
 
 # Tapping
-# xinput list
-# xinput list-props <device>
-# xinput set prop <device id> <prop id> <value>
-xinput set-prop 11 329 1
+xinput set-prop "ALP0012:00 044E:120C" "libinput Tapping Enabled" 1
 
 # Show time in status
 while true; do
