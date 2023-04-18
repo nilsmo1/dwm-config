@@ -9,7 +9,7 @@ declare -A vol_icons=( ["off"]=$(echo -e "\uf026") ["on"]=$(echo -e "\uf028") )
 vol=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(.*)%\]/, m) {print m[1]}')
 vol_s=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(on|off)\]/, m) {print m[1]}')
 
-date_time=$(date -u +'%A ┃ %-d/%-m (%B %-d) ┃ %R ')
+date_time=$(date +'%A ┃ %-d/%-m (%B %-d) ┃ %R ')
 connection=$(netctl list | awk '/^\*/{for (i=2; i<=NF; i++) printf $i " ";}')
 
 [[ $charging = "Charging" ]] && bat_full="$c_bat_icon ($bat%)" || bat_full="$bat_icon ($bat%)"
