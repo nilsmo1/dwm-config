@@ -10,7 +10,7 @@ vol=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(.*)%\]/, m) {pri
 vol_s=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(on|off)\]/, m) {print m[1]}')
 
 date_time=$(date +'%A ┃ %-d/%-m (%B %-d) ┃ %R ')
-connection=$(netctl list | awk '/^\*/{for (i=2; i<=NF; i++) printf $i " ";}')
+connection=$(nmcli connection show | grep "wifi" | awk '{print $1}')
 
 [[ $charging = "Charging" ]] && bat_full="$c_bat_icon ($bat%)" || bat_full="$bat_icon ($bat%)"
 [[ $connection ]] && connection="$(echo -e "\uf1eb") $connection┃"
