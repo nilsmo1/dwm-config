@@ -10,10 +10,11 @@ vol=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(.*)%\]/, m) {pri
 vol_s=$(amixer sget Master | gawk 'match($0, /Mono: Playback.* \[(on|off)\]/, m) {print m[1]}')
 
 date_time=$(date +'%A ┃ %-d/%-m (%B %-d) ┃ %R ')
-connection=$(nmcli connection show | grep "wifi" | awk '{print $1}')
+connection=$(nmcli connection show | grep "wifi" | head -n1 | awk '{print $1}')
+connection_status=$(nmcli connection show | grep "wifi" | head -n1 | awk '{print $4}')
 
 [[ $charging = "Charging" ]] && bat_full="$c_bat_icon ($bat%)" || bat_full="$bat_icon ($bat%)"
-[[ $connection ]] && connection="$(echo -e "\uf1eb") $connection┃"
+[[ $connection_status != "--" ]] && connection="$(echo -e "\uf1eb") $connection┃" || connection="no connection┃"
 [[ $vol_s = "on" ]] && vol_out="${vol_icons[$vol_s]} ($vol%)" || vol_out="${vol_icons[$vol_s]}"
 
 xsetroot -name "$connection $vol_out ┃ $bat_full ┃ $date_time" 
