@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-base='_latex_cmd_'
+base='_latex_cmd_tmp_file_'
 tex_output="$base.tex"
 pdf_output="$base.pdf"
 png_output="$base.png"
@@ -21,4 +21,5 @@ $@
 \end{document}" > $tex_output && pdflatex --halt-on-error $tex_output > /dev/null &&
 convert -density 300 $pdf_output -quality 500 $png_output &&
 xclip -selection clipboard -t image/png -i $png_output &&
-rm -f $base.* || echo "something went wrong!"
+feh $png_output || echo "something went wrong!"
+rm -f $base.*
