@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 base='_latex_cmd_'
 tex_output="$base.tex"
