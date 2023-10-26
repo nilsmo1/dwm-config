@@ -5,6 +5,7 @@ input_file=$base'input_.tex'
 tex_output="$base.tex"
 pdf_output="$base.pdf"
 png_output="$base.png"
+quiet=true
 
 [ "$#" -lt 1 ] && exit 1
 
@@ -27,10 +28,15 @@ echo "\documentclass[border=2pt]{standalone}
 \begin{varwidth}{\linewidth}
 $input
 \end{varwidth}
-\end{document}" > $tex_output && pdflatex --halt-on-error $tex_output > /dev/null &&
-convert -density 600 $pdf_output -quality 600 $png_output &&
-xclip -selection clipboard -t image/png -i $png_output ||
-echo "something went wrong!"
+\end{document}" > $tex_output
+
+if [ $quiet ]; then
+    pdflatex --halt-on-error $tex_output > /dev/null || echo "pdflatex error"
+else
+    pdflatex --halt-on-error $tex_output > /dev/null || echo "pdflatex error"
+fi
+convert -density 600 $pdf_output -quality 600 $png_output || echo "convert error"
+xclip -selection clipboard -t image/png -i $png_output || echo "xclip error"
 if test -f $png_output; then
     feh $png_output
 fi
