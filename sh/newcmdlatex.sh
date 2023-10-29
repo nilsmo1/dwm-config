@@ -114,7 +114,7 @@ if ! xclip -selection clipboard -t image/png -i $png_output; then
     clean
 fi
 
-if $display; then
+if $verbose; then
     echo "Copied png to clipboard!"
 fi
 
